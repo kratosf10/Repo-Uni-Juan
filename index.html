@@ -22,7 +22,7 @@
 </head>
 <body>
 
-    <h1>Juego de Adivinanza</h1>
+    <h1>Juego de Adivinanza By 2005 V2</h1>
     <p>Estoy pensando en un número entre 1 y 100.</p>
     <input type="number" id="guess" placeholder="Tu adivinanza" min="1" max="100">
     <button onclick="checkGuess()">Adivinar</button>
@@ -43,9 +43,9 @@
                 result.textContent = `¡Correcto! El número era ${randomNumber}. Lo adivinaste en ${attempts} intentos.`;
                 document.getElementById("resetButton").style.display = 'block';
             } else if (userGuess < randomNumber) {
-                result.textContent = "Demasiado bajo. Intenta de nuevo.";
+                result.textContent = "Demasiado bajo. Try Again.";
             } else if (userGuess > randomNumber) {
-                result.textContent = "Demasiado alto. Intenta de nuevo.";
+                result.textContent = "Demasiado alto. Try Again.";
             }
 
             document.getElementById("guess").value = '';
