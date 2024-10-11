@@ -14,6 +14,10 @@
             padding: 10px;
             margin: 10px;
             width: 50px;
+            background-color: red; /* Cambia el color de fondo a rojo */
+            color: white; /* Cambia el color del texto a blanco para mejor contraste */
+            border: none; /* Opcional: elimina el borde */
+            border-radius: 5px; /* Opcional: bordes redondeados */
         }
         button {
             padding: 10px 20px;
@@ -22,7 +26,7 @@
 </head>
 <body>
 
-    <h1>Juego de Adivinanza By 2005 V2</h1>
+    <h1>Juego de Adivinanza</h1>
     <p>Estoy pensando en un número entre 1 y 100.</p>
     <input type="number" id="guess" placeholder="Tu adivinanza" min="1" max="100">
     <button onclick="checkGuess()">Adivinar</button>
@@ -43,9 +47,9 @@
                 result.textContent = `¡Correcto! El número era ${randomNumber}. Lo adivinaste en ${attempts} intentos.`;
                 document.getElementById("resetButton").style.display = 'block';
             } else if (userGuess < randomNumber) {
-                result.textContent = "Demasiado bajo. Try Again.";
+                result.textContent = "Demasiado bajo. Intenta de nuevo.";
             } else if (userGuess > randomNumber) {
-                result.textContent = "Demasiado alto. Try Again.";
+                result.textContent = "Demasiado alto. Intenta de nuevo.";
             }
 
             document.getElementById("guess").value = '';
